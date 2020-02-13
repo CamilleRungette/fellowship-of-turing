@@ -1,8 +1,33 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Montserrat", Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* =============================
+              Générique
+=============================== */
+.black{
+  color: black;
+}
+.black:hover{
+  color: black;
+  text-decoration: none;
+}
+
+/* =============================
+              Navbar
+=============================== */
+
+.hand-navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.4em;
+  width: 30%;
 }
