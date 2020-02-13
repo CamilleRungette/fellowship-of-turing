@@ -8,19 +8,22 @@
     <%- include('./partials/navbar') %> 
     <div class="container">
 
-      <h1>Page contact</h1>
+      <h2>Nous contacter</h2>
 
       <form action="/contact" method="POST">
         <div>
-          <div class="form-block ">
-            <label>Titre</label>
-            <input type="text" placeholder="Montjoie! Saint-Denis, ..." name="email">
-          </div >
-          <div >
-            <label>Lieu</label>
-            <input type="text" placeholder="Acc.mie Fratellini,  ..." name="content">
+          <div class="form-block">
+            <label>Titre</label> <br/>
+            <input type="text" class="form-input" placeholder="Email" name="email">
+          </div>
+          <div class="form-block">
+            <label>Lieu</label> <br/>
+            <input type="text" class="form-input" placeholder="Message" name="content">
           </div>
         </div>
+
+        <button class="btn">Envoyer</button>
+      </form>
       </div>
   </body>
 </html>

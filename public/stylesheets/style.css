@@ -25,6 +25,17 @@ body {
   padding-right: 3em;
 }
 
+button{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.4em;
+  padding: 0.6em;
+  border-radius: 8px;
+  box-shadow: none;
+  background-color: black;
+  color: #ccc;
+  border: black;
+}
+
 /* =============================
               Navbar
 =============================== */
@@ -45,4 +56,27 @@ body {
 
 .navbar-title{
   font-weight: lighter ;
+}
+
+/* =============================
+              Form
+=============================== */
+.form-block{
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+input{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.7em;
+  padding: 0.5em;
+  width: 30em;
+  margin-top: 0.5em;
+  border: none;
+  border-bottom: 1px solid #ccc  ;
+}
+
+input:focus{
+  outline: none;
 }
