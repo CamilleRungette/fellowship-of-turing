@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var MessageModel = require('../models/message')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+  res.render('index');
 });
 
 router.get('/work', function(req, res, next){
@@ -31,6 +33,25 @@ router.get('/contact', function(req, res, next){
   res.render('contact')
 })
 
+router.post('/contact', function(req, res, next){
+  
+
+  console.log(req.body)
+  newMessage = new MessageModel({
+    sender_email: req.body.email,
+    content: req.body.content,
+    date: new Date
+  }) 
+
+  newMessage.save(function(err, message){
+    if (err){
+      console.log("MESSAGE NOT SAVED", err)
+    } else if (message){
+      console.log("MESSAGE SAVED", message)
+    }
+  })
+  res.redirect('/')
+})
 
 
 
