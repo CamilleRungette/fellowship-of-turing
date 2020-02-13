@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var MessageModel = require('../models/message')
+var frenchDate = require('../helpers/functions')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -35,12 +36,11 @@ router.get('/contact', function(req, res, next){
 
 router.post('/contact', function(req, res, next){
   
-
   console.log(req.body)
   newMessage = new MessageModel({
     sender_email: req.body.email,
     content: req.body.content,
-    date: new Date
+    date: frenchDate,
   }) 
 
   newMessage.save(function(err, message){
