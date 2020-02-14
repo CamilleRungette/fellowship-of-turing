@@ -20,10 +20,6 @@ body {
   text-decoration: none;
 }
 
-.link:hover{
-  font-weight: bold;
-}
-
 .container{
   margin-top: 3em;
   padding-left: 3em;
@@ -45,22 +41,48 @@ button{
               Navbar
 =============================== */
 
-.hand-navbar{
+header{
   display: flex;
   justify-content: space-between;
   padding: 2em;
 }
 
-.navbar-list{
+nav{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: 1.4em;
-  width: 40%;
+  width: 50%;
 }
 
 .navbar-title{
   font-weight: lighter ;
+}
+
+header nav > a {
+  overflow:hidden;
+}
+
+header nav a > span:first-child{
+  position: relative;
+  display: inline-block;
+  transform: translateY(0); 
+  transition: transform .5s;
+}
+
+header nav a > span:after {
+  transition: .5s linear;  
+  position: absolute;
+  content: attr(data-span);
+  top:100%;
+  left:0;
+  color: red;
+  font-weight: bold;
+}
+
+header nav a > span:hover{
+
+  transform: translateY(-100%);   
 }
 
 /* =============================
