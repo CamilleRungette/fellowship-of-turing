@@ -2,6 +2,11 @@ body {
 	font: 14px "Montserrat", Arial, sans-serif;
 }
 
+*{
+  box-sizing: border-box;
+}
+
+
 /* =============================
                 Générique
 =============================== */
@@ -12,6 +17,10 @@ body {
 .black:hover {
 	color: black;
 	text-decoration: none;
+}
+
+.link{
+  color: black;
 }
 
 .link:hover {
@@ -39,22 +48,48 @@ button {
                 Navbar
 =============================== */
 
-.hand-navbar {
-	display: flex;
-	justify-content: space-between;
-	padding: 2em;
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
 }
 
-.navbar-list {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	font-size: 1.4em;
-	width: 40%;
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.4em;
+  width: 50%;
 }
 
 .navbar-title {
 	font-weight: lighter;
+}
+
+header nav > a {
+  overflow:hidden;
+}
+
+header nav a > span:first-child{
+  position: relative;
+  display: inline-block;
+  transform: translateY(0); 
+  transition: transform .5s;
+}
+
+header nav a > span:after {
+  transition: .5s linear;  
+  position: absolute;
+  content: attr(data-span);
+  top:100%;
+  left:0;
+  color: red;
+  font-weight: bold;
+}
+
+header nav a > span:hover{
+
+  transform: translateY(-100%);   
 }
 
 /* =============================
@@ -80,9 +115,59 @@ input:focus {
 	outline: none;
 }
 
+
+input{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5em;
+  width: 100%;
+  margin-top: 0.5em;
+  border: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+.form-block:after{
+  display: flex;
+  content: "";
+  color: transparent;
+  height: 2px;
+  background-size: 200%;
+  background-image: linear-gradient(to left, #cccccc 50%, red 50% );
+  transition: background-position .5s .15s ease-out;
+  background-position: right;
+}
+
+.form-block:focus-within:after{
+  background-position: left;
+}
+
+
+textarea{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5em;
+  width: 100%;
+  margin-top: 0.5em;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.victor{
+  width: 40%;
+}
+
 /* ====================================
                 Page ARTCILE
-====================================== */
+ ==================*/
 
 .form-testing {
 	height: 100%;
@@ -110,4 +195,7 @@ input:focus {
 
 .main-toggle {
 	margin-right: 40%;
+}
+
+
 }

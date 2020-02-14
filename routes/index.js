@@ -23,11 +23,6 @@ router.get('/team', function(req, res, next){
   res.render('team')
 })
 
-router.get('/articles', function(req, res, next){
-
-  res.render('articles')
-})
-
 router.get('/contact', function(req, res, next){
 
   res.render('contact')
