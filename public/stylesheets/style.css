@@ -35,13 +35,17 @@ body {
 
 button {
 	font-family: "Montserrat", Arial, sans-serif;
-	font-size: 1.4em;
+	font-size: 1.2rem;
 	padding: 0.6em;
 	border-radius: 8px;
 	box-shadow: none;
 	background-color: black;
-	color: #ccc;
+	color:#fff;
 	border: black;
+}
+
+button:focus{
+  outline: none;
 }
 
 /* =============================
