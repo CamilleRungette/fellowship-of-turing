@@ -90,8 +90,16 @@ input:focus{
   content: "";
   color: transparent;
   height: 2px;
-  background-color: blueviolet;
+  background-size: 200%;
+  background-image: linear-gradient(to left, #cccccc 50%, red 50% );
+  transition: background-position .5s .15s ease-out;
+  background-position: right;
 }
+
+.form-block:focus-within:after{
+  background-position: left;
+}
+
 
 textarea{
   font-family: 'Montserrat', Arial, sans-serif;
