@@ -2,6 +2,11 @@ body {
   font: 14px "Montserrat", Arial, sans-serif;
 }
 
+*{
+  box-sizing: border-box;
+}
+
+
 
 /* =============================
               Générique
@@ -69,14 +74,41 @@ button{
 
 input{
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 0.7em;
+  font-size: 1rem;
   padding: 0.5em;
-  width: 30em;
+  width: 100%;
   margin-top: 0.5em;
   border: none;
-  border-bottom: 1px solid #ccc  ;
 }
 
 input:focus{
   outline: none;
+}
+
+.form-block:after{
+  display: flex;
+  content: "";
+  color: transparent;
+  height: 2px;
+  background-color: blueviolet;
+}
+
+textarea{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5em;
+  width: 100%;
+  margin-top: 0.5em;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.victor{
+  width: 40%;
 }
