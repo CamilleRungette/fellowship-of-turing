@@ -26,7 +26,9 @@ body {
 .container {
 	margin-top: 3em;
 	padding-left: 3em;
-	padding-right: 3em;
+  padding-right: 3em;
+  width: 80%;
+  margin: auto;
 }
 
 button {
@@ -45,7 +47,8 @@ button:focus{
 }
 
 h1{
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-left: 15%;
 }
 
 /* =============================
@@ -203,4 +206,48 @@ textarea:focus{
 
 .main-toggle {
 	margin-right: 40%;
+}
+
+
+/* =======================================================
+                          TEAM
+========================================================= */
+
+.team-title{
+  font-size: 600%;
+  font-weight: lighter;
+  margin-bottom: 10%;
+}
+
+.person{
+  width: 30%;
+  margin: auto;
+}
+
+.portrait{
+  width: 100%;
+}
+
+.job-title{
+  font-size: 140%;
+  margin: auto;
+  text-align: center ;
+  margin-top: 3%;
+}
+
+.name{
+  font-size: 400%;
+  margin: auto;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.presentation{
+  font-size: 133%;
+  text-align: center;
+  margin: 1em;
+}
+
+.team-row{
+  display: flex;
 }
