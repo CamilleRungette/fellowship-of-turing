@@ -22,25 +22,32 @@ body {
 	color: black;
 }
 
-.link:hover {
-	font-weight: bold;
-}
-
 .container {
 	margin-top: 3em;
 	padding-left: 3em;
 	padding-right: 3em;
+	width: 80%;
+	margin: auto;
 }
 
 button {
 	font-family: "Montserrat", Arial, sans-serif;
-	font-size: 1.4em;
+	font-size: 1.2rem;
 	padding: 0.6em;
 	border-radius: 8px;
 	box-shadow: none;
 	background-color: black;
-	color: #ccc;
+	color: #fff;
 	border: black;
+}
+
+button:focus {
+	outline: none;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-left: 15%;
 }
 
 /* =============================
@@ -62,7 +69,11 @@ nav {
 }
 
 .navbar-title {
-	font-weight: lighter;
+	font-weight: bold;
+}
+
+#navbar-title {
+	font-size: 1.4rem;
 }
 
 header nav > a {
@@ -192,7 +203,7 @@ ul {
 
 /* ====================================
                 Page ARTCILE
-====================================*/
+ ======================================*/
 
 .form-testing {
 	height: 100%;
@@ -220,4 +231,47 @@ ul {
 
 .main-toggle {
 	margin-right: 40%;
+}
+
+/* =======================================================
+                          TEAM
+========================================================= */
+
+.team-title {
+	font-size: 600%;
+	font-weight: lighter;
+	margin-bottom: 10%;
+}
+
+.person {
+	width: 30%;
+	margin: auto;
+}
+
+.portrait {
+	width: 100%;
+}
+
+.job-title {
+	font-size: 140%;
+	margin: auto;
+	text-align: center;
+	margin-top: 3%;
+}
+
+.name {
+	font-size: 400%;
+	margin: auto;
+	text-align: center;
+	margin-top: 8%;
+}
+
+.presentation {
+	font-size: 133%;
+	text-align: center;
+	margin: 1em;
+}
+
+.team-row {
+	display: flex;
 }
