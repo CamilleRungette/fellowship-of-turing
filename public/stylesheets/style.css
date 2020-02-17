@@ -1,30 +1,36 @@
-body {
-	font: 14px "Montserrat", Arial, sans-serif;
+
+@font-face {
+	font-family: "Didot";
+	src: url('../fonts/Didot-Medium.ttf');
 }
+@font-face {
+	font-family: "Didot";
+	font-style: italic;
+	src: url('../fonts/Didot-Ital.ttf');
+}
+
+body {
+  font-family:  "Montserrat", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Didot", Garamond, "Times New Roman", serif;
+} 
 
 *{
   box-sizing: border-box;
 }
 
 
-/* =============================
-                Générique
-=============================== */
-.black {
-	color: black;
-	text-decoration: none;
-}
-.black:hover {
-	color: black;
-	text-decoration: none;
-}
-
-.link{
-  color: black;
-}
-
-.link:hover {
-	font-weight: bold;
+/* ===========================================================================================================
+                                                 Générique
+============================================================================================================ */
+.color {
+  color: rgb(14,18,43);
+  color: rgb(218, 221, 242);
+  color: rgb(140, 156, 255);
+  color: rgb(179,153,68);
+  color: rgb(255, 253, 247);
 }
 
 .container {
@@ -195,4 +201,50 @@ textarea:focus{
 
 .main-toggle {
 	margin-right: 40%;
+}
+
+
+/* ===========================================================================================================
+                                                 Homepage
+============================================================================================================ */
+
+#homepage{
+  margin:0;
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-composant {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax-base {
+  transform: translateZ(0);
+  background: rgba(218, 221, 242, 0.4);
+}
+
+.parallax-back {
+  transform: translateZ(-1px) scale(2);
+  background: blue;
+}
+
+.un {
+  background: url("https://images.squarespace-cdn.com/content/5b0f605e697a98b4a292e4f0/1537306583123-NP6F7K0S2Y98ZNNETKVN/reussir-photographier-paysages.jpg?format=1500w&content-type=image%2Fjpeg") no-repeat;
+  background-size: cover;
+
 }
