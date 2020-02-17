@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5 {
 
 /* ===========================================================================================================
                                                  Générique
-============================================================================================================ */
 .color {
   color: rgb(14,18,43);
   color: rgb(218, 221, 242);
@@ -33,69 +32,104 @@ h1, h2, h3, h4, h5 {
   color: rgb(255, 253, 247);
 }
 
+* {
+	box-sizing: border-box;
+}
+
+/* =============================
+                Générique
+=============================== */
+.black {
+	color: black;
+	text-decoration: none;
+}
+.black:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.link {
+	color: black;
+}
+
 .container {
 	margin-top: 3em;
 	padding-left: 3em;
 	padding-right: 3em;
+	width: 80%;
+	margin: auto;
+	color: rgb
 }
 
 button {
 	font-family: "Montserrat", Arial, sans-serif;
-	font-size: 1.4em;
+	font-size: 1.2rem;
 	padding: 0.6em;
 	border-radius: 8px;
 	box-shadow: none;
 	background-color: black;
-	color: #ccc;
+	color: #fff;
 	border: black;
+}
+
+button:focus {
+	outline: none;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-left: 15%;
 }
 
 /* =============================
                 Navbar
 =============================== */
 
-header{
-  display: flex;
-  justify-content: space-between;
-  padding: 2em;
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 2em;
 }
 
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 1.4em;
-  width: 50%;
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 1.4em;
+	width: 50%;
 }
 
 .navbar-title {
-	font-weight: lighter;
+	font-weight: bold;
+}
+
+#navbar-title {
+	font-size: 1.4rem;
 }
 
 header nav > a {
-  overflow:hidden;
+	overflow: hidden;
 }
 
-header nav a > span:first-child{
-  position: relative;
-  display: inline-block;
-  transform: translateY(0); 
-  transition: transform .5s;
+header nav a > span:first-child {
+	position: relative;
+	display: inline-block;
+	transform: translateY(0);
+	transition: transform 0.5s;
 }
 
 header nav a > span:after {
-  transition: .5s linear;  
-  position: absolute;
-  content: attr(data-span);
-  top:100%;
-  left:0;
-  color: red;
-  font-weight: bold;
+	transition: 0.5s linear;
+	position: absolute;
+	content: attr(data-span);
+	top: 100%;
+	left: 0;
+	color: red;
+	font-weight: bold;
 }
 
-header nav a > span:hover{
-
-  transform: translateY(-100%);   
+header nav a > span:hover {
+	transform: translateY(-100%);
 }
 
 /* =============================
@@ -121,59 +155,86 @@ input:focus {
 	outline: none;
 }
 
-
-input{
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  padding: 0.5em;
-  width: 100%;
-  margin-top: 0.5em;
-  border: none;
+input {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 1rem;
+	padding: 0.5em;
+	width: 100%;
+	margin-top: 0.5em;
+	border: none;
 }
 
-input:focus{
-  outline: none;
+input:focus {
+	outline: none;
 }
 
-.form-block:after{
-  display: flex;
-  content: "";
-  color: transparent;
-  height: 2px;
-  background-size: 200%;
-  background-image: linear-gradient(to left, #cccccc 50%, red 50% );
-  transition: background-position .5s .15s ease-out;
-  background-position: right;
+.form-block:after {
+	display: flex;
+	content: "";
+	color: transparent;
+	height: 2px;
+	background-size: 200%;
+	background-image: linear-gradient(to left, #cccccc 50%, red 50%);
+	transition: background-position 0.5s 0.15s ease-out;
+	background-position: right;
 }
 
-.form-block:focus-within:after{
-  background-position: left;
+.form-block:focus-within:after {
+	background-position: left;
 }
 
-
-textarea{
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  padding: 0.5em;
-  width: 100%;
-  margin-top: 0.5em;
-  border: none;
-  resize: none;
-  overflow: hidden;
-  overflow-wrap: break-word;
+textarea {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 1rem;
+	padding: 0.5em;
+	width: 100%;
+	margin-top: 0.5em;
+	border: none;
+	resize: none;
+	overflow: hidden;
+	overflow-wrap: break-word;
 }
 
-textarea:focus{
-  outline: none;
+textarea:focus {
+	outline: none;
 }
 
-.victor{
-  width: 40%;
+.victor {
+	width: 40%;
+}
+
+/* ====================================
+                Page LISTE ARTCILES
+====================================*/
+
+ul {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-left: -35px;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.article-card {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	min-width: 300px;
+	width: 33%;
+	padding-left: 35px;
+	padding-bottom: 35px;
+}
+
+.card-image {
+	height: 200px;
+	object-fit: cover;
 }
 
 /* ====================================
                 Page ARTCILE
- ==================*/
+ ======================================*/
 
 .form-testing {
 	height: 100%;
@@ -203,6 +264,7 @@ textarea:focus{
 	margin-right: 40%;
 }
 
+<<<<<<< HEAD
 
 /* ===========================================================================================================
                                                  Homepage
@@ -248,3 +310,47 @@ textarea:focus{
   background-size: cover;
 
 }
+=======
+/* =======================================================
+                          TEAM
+========================================================= */
+
+.team-title {
+	font-size: 600%;
+	font-weight: lighter;
+	margin-bottom: 10%;
+}
+
+.person {
+	width: 30%;
+	margin: auto;
+}
+
+.portrait {
+	width: 100%;
+}
+
+.job-title {
+	font-size: 140%;
+	margin: auto;
+	text-align: center;
+	margin-top: 3%;
+}
+
+.name {
+	font-size: 400%;
+	margin: auto;
+	text-align: center;
+	margin-top: 8%;
+}
+
+.presentation {
+	font-size: 133%;
+	text-align: center;
+	margin: 1em;
+}
+
+.team-row {
+	display: flex;
+}
+>>>>>>> 6269b6d86bed0d27ee906b9b7b03e2c29a2b7bac
